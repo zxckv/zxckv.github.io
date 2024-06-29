@@ -15,14 +15,32 @@ body {
     padding: 2vh 1vw;
 }
 
-body > div {
-    width: auto;
-    border: 2px solid var(--cu-black);
-    height: 200px;
-    margin: 1vh 0vw;
-    padding: 1vh 1vw;
+@keyframes svg-hammer-swing {
+    33% { transform: rotate(55deg); }
 }
 
-h1 {
-    font-size: xx-large;
+#svg-hammer {
+    text-align: center;
+    margin: 20vh 0vw;
+
+    * {
+        margin: 2vh 1vw;
+    }
+
+    svg {
+        position: relative;
+        height: 20vh;
+        width: auto;
+        animation-name: svg-hammer-swing;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    path {
+        fill: var(--cu-black);
+    }
+    
+    p {
+        font-size: large;
+    }
 }
